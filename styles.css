@@ -74,7 +74,6 @@ body{
     color:var(--main-color);
     padding:1.5rem 0;
 }
-
 .card .description{
     font-family: 'Lexend Deca', sans-serif;
     line-height: 1.4rem;
