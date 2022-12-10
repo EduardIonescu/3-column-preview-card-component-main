@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --border-radius: 15px;
+    --main-color: hsl(0, 0%, 95%);
+    --paragraph-color:hsla(0, 0%, 100%, 0.75);
+    --main-orange:hsl(31, 77%, 52%);
+    --main-cyan: hsl(184, 100%, 22%);
+    --main-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--main-color);
+}
+
+body{
+    width: 100vw;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:15px;
+}
+
+#main-section{
+    width:375px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:375px;
+    height:100%;
+    padding: 3rem 4.5rem;
+    text-align:left;
+    max-width:375px;
+}
+
+@media (max-width:1000px){
+    .orange{
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+    .dark-cyan{
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+    }
+    .card{
+        height:450px;
+    }
+}
+
+.orange{
+    background-color: var(--main-orange);
+}
+.cyan{
+    background-color:var(--main-cyan);
+}
+.dark-cyan{
+    background-color: var(--main-dark-cyan);
+}
+
+.card .title{
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    font-size:3rem;
+    color:var(--main-color);
+    padding:1.5rem 0;
+}
+
+.card .description{
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.4rem;
+    color:var(--paragraph-color);
+    height:150px;
+}
+
+.card .link-button{
+    background-color:var(--main-color);
+    padding:1rem 2.2rem;
+    border-radius: 2.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+    border:1px solid var(--main-color);
+    transition: 0.3s;
+}
+
+.card .link-button:active{
+    color:none;
+}
+
+.card .link-button:hover{
+    background-color: transparent;
+    color:var(--main-color);
+}
+
+.card .orange-color{
+    color:var(--main-orange);
+}
+.card .cyan-color{
+    color:var(--main-cyan);
+}
+.card .dark-cyan-color{
+    color:var(--main-dark-cyan);
+}
+
+@media(min-width:1000px){
+    #main-section{
+        width:1000px;
+        height:600px;
+    }
+    .card .description{
+        height:300px;
+    }
+    .card{
+        flex:1 1 30%;
+        padding: 3.9rem;
+        max-width:100%;
+    }
+    .orange{
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        
+    }
+    .dark-cyan{
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+    }
+}
